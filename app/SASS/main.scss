@@ -1,0 +1,111 @@
+// Variables
+$card-background: white;
+$card-border-color: #333;
+$card-border-radius: 0.5rem;
+$padding: 0.5rem;
+$max-width: 300px;
+$font-size-small: 0.8em;
+$font-size-regular: 1rem;
+$input-border-radius: 0.25em;
+$input-border-color: $card-border-color;
+$input-padding: 0.25em;
+$gap-size: 0.25em;
+$animation-duration: 250ms;
+$animation-delay: 125ms;
+$animation-timing: ease-in-out;
+
+@mixin card-style {
+  background-color: $card-background;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  padding: $padding;
+  max-width: $max-width;
+  margin: 0 auto;
+  animation: fade $animation-duration forwards $animation-timing;
+}
+
+@mixin input-style {
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  font-size: $font-size-regular;
+  padding: $input-padding;
+}
+
+.card {
+  @include card-style;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $padding;
+  gap: $gap-size;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  > label {
+    font-weight: bold;
+    font-size: $font-size-small;
+    color: $card-border-color;
+  }
+
+  > input {
+    @include input-style;
+  }
+}
+
+.step-title {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card.active {
+  animation: slide $animation-duration $animation-delay $animation-timing both;
+}
+
+.multi-step-form {
+  overflow: hidden;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(.75);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+
+h1{
+    font: bold;
+    text-align: center;
+    
+
+}
+
