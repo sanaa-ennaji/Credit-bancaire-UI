@@ -1,182 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="app/SASS/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="app/SASS/main.css">
 
 </head>
+
 <body>
-    <h2>Demander mon crédit en ligne</h2>
-    <div>
-      
-    <div>
-      <div>
-        <div><span>1</span><p>Simuler mon crédit</p></div>
-        <div><span>2</span><p>Mes coordonnées</p></div>
-        <div><span>3</span><p>Mes infos personnelles</p></div>
+  <h1>Demander mon crédit en ligne</h1>
+  <div>
+
+    <div class="main">
+
+      <div class="cards">
+        <div class="card0"><span class"number">1</span>
+          <p>Simuler mon crédit</p>
+        </div>
+        <div class="card0"><span class"number">2</span>
+          <p>Mes coordonnées</p>
+        </div>
+        <div class="card0"><span class"number">3</span>
+          <p>Mes infos personnelles</p>
+        </div>
       </div>
-    <div>
-    <form data-multi-step class="multi-step-form">
-        <div class="card" data-step>
-          <h3 class="step-title">form 1</h3>
-          <div class="form-group">
-            <label for="projet">Mon projet</label>
-            <select  name="projet" id="projet">
-              <option value="j'ai besoin d'argent">j'ai besoin d'argent</option>
-              <option value="">j'ai finance mon vihecule</option>
-              <option value="">j'ai besoin d'argent</option>
-            </select>
-            <label for="job">Je suis</label>
-            <select  name="job" id="job">
-              <option value="j'ai besoin d'argent">artisan</option>
-              <option value="j'ai finance mon vihecule">fonctionaire</option>
-              <option value="ma maison">artisan</option>
-            </select>
 
-            <label for="montant">Montant (en DH)</label>
-            <input type="range" id="montant" name="montant" min="0" max="100" value="90" step="10" />
-           
-            <label for="duree">Durée (en mois)</label>
-            <input type="range" id="duree" name="montant" min="0" max="100" value="90" step="10" />
-           
-          </div>
-          <div class="form-group">
-            <label for="mensualites">Mensualités (en DH)</label>
-            <input type="range" name="mensualites" id="mensualite">
-          </div>
-          <button type="button" data-next>Next</button>
-        </div>
-        <div class="card" data-step>
-          <h3 class="step-title">form 2</h3>
-          <div class="form-group">
-            <label for="email">Email*
-            </label>
-            <input type="email" name="email" id="email">
-          </div>
-          <div class="form-group">
-            <label for="phone">Téléphone mobile*</label>
-            <input type="phone" name="phone" id="phone">
-          </div>
-         
-          <!-- <button type="button" data-previous>Previous</button> -->
-          <button type="button" data-next>Continuer <span>sans engagment</span></button>
-        </div>
-        <div class="card" data-step>
-          <h3 class="step-title">form 3</h3>
+      <div classa="forms">
+        <form data-multi-step class="multi-step-form">
+          <div class="card" data-step>
+            <h3 class="step-title">form 1</h3>
+            
+            <div class="form-group">
+              <label for="projet">Mon projet</label>
+              <select class="select-style"  name="projet" id="projet">
+                <option value="j'ai besoin d'argent">j'ai besoin d'argent</option>
+                <option value="">j'ai finance mon vihecule</option>
+                <option value="">j'ai besoin d'argent</option>
+              </select>
+              <label for="job">Je suis</label>
+              <select class="select-style" name="job" id="job">
+                <option value="j'ai besoin d'argent">artisan</option>
+                <option value="j'ai finance mon vihecule">fonctionaire</option>
+                <option value="ma maison">artisan</option>
+              </select>
 
-          <div class="form-group">
-            <label for="civilite">Civilité</label>
-             <label class="custom-radio">
-              <input type="radio" name="option" value="monsieur" checked>
-              <div class="field"></div>
-              <span class="fs1 color-four">Monsieur</span>
-            </label>
-          
-            <label class="custom-radio">
-              <input type="radio" name="option" value="madame">
-              <div class="field"></div>
-              <span class="fs1 color-four">Madame</span>
-            </label>
-          
-            <label class="custom-radio">
-              <input type="radio" name="option" value="mademoiselle">
-              <div class="field"></div>
-              <span class="fs1 color-four">Mademoiselle</span>
-            </label>
+              <label for="montant">Montant (en DH)</label>
+              <input type="range" id="montant" name="montant" min="0" max="100" value="90" step="10" />
+
+              <label for="duree">Durée (en mois)</label>
+              <input type="range" id="duree" name="montant" min="0" max="100" value="90" step="10" />
+
+            </div>
+            <div class="form-group">
+              <label for="mensualites">Mensualités (en DH)</label>
+              <input type="range" name="mensualites" id="mensualite">
+            </div>
+            <button type="button" data-next>Next</button>
           </div>
+          <div class="card" data-step>
+            <h3 class="step-title">form 2</h3>
+            <div class="form-group">
+              <label for="email">Email*
+              </label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone mobile*</label>
+              <input type="phone" name="phone" id="phone">
+            </div>
 
-        
-          <div class="form-group">
-            <input type="text" required name="nom">
-            <div class="underline"></div>
-            <label for="">nom</label>
+            <!-- <button type="button" data-previous>Previous</button> -->
+            <button type="button" data-next>Continuer <span>sans engagment</span></button>
           </div>
+          <div class="card" data-step>
+            <h3 class="step-title">form 3</h3>
 
-          <div class="form-group">
-            <input type="text" required name="prenom">
-            <div class="underline"></div>
-            <label for="">prenom</label>
-          </div>
+            <div class="form-group">
+              <label for="civilite">Civilité</label>
+               <label class="custom-radio">
+                <input type="radio" name="option" value="monsieur" checked>
+                <div class="field"></div>
+                <span class="fs1 color-four">Monsieur</span>
+              </label>
 
-          <div class="form-group">
-            <input type="text" required name="cin">
-            <div class="underline"></div>
-            <label for="">CIN</label>
-          </div>
+              <label class="custom-radio">
+                <input type="radio" name="option" value="madame">
+                <div class="field"></div>
+                <span class="fs1 color-four">Madame</span>
+              </label>
 
-          <div class="form-group">
-            <input type="text" required name="naissance">
-            <div class="underline"></div>
-            <label for="">date de naissance</label>
-          </div>
+              <label class="custom-radio">
+                <input type="radio" name="option" value="mademoiselle">
+                <div class="field"></div>
+                <span class="fs1 color-four">Mademoiselle</span>
+              </label>
+            </div>
 
-          <div class="form-group">
-            <input type="text" required name="dateDebut">
-            <div class="underline"></div>
-            <label for="">date debut d'activite</label>
-          </div>
 
-          <div class="form-group">
-            <input type="text" required name="cin">
-            <div class="underline"></div>
-            <label for="">CIN</label>
-          </div>
+            <div class="form-group">
+              <input type="text" required name="nom">
+              <div class="underline"></div>
+              <label for="">nom</label>
+            </div>
 
-          <div class="form-group">
-            <input type="text" required name="cin">
-            <div class="underline"></div>
-            <label for="">Total</label>
-          </div>
+            <div class="form-group">
+              <input type="text" required name="prenom">
+              <div class="underline"></div>
+              <label for="">prenom</label>
+            </div>
 
-          <div class="form-group">
-             <label class="custom-radio">
-              <input type="radio" name="option" value="monsieur" checked>
-              <div class="field"></div>
-              <span class="fs1 color-four">Monsieur</span>
-            </label>
-          </div>
+            <div class="form-group">
+              <input type="text" required name="cin">
+              <div class="underline"></div>
+              <label for="">CIN</label>
+            </div>
 
-  <div class="form-group">
-    <label for="credit">Avez vous des crédits en cours ?</label>
-            <label class="custom-radio">
-              <input type="radio" name="credit" value="oui">
-              <div class="field"></div>
-              <span class="fs1 color-four">oui</span>
-            </label>
+            <div class="form-group">
+              <input type="text" required name="naissance">
+              <div class="underline"></div>
+              <label for="">date de naissance</label>
+            </div>
 
-            <label class="custom-radio"></label>
+            <div class="form-group">
+              <input type="text" required name="dateDebut">
+              <div class="underline"></div>
+              <label for="">date debut d'activite</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" required name="cin">
+              <div class="underline"></div>
+              <label for="">CIN</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" required name="cin">
+              <div class="underline"></div>
+              <label for="">Total</label>
+            </div>
+
+            <div class="form-group">
+               <label class="custom-radio">
+                <input type="radio" name="option" value="monsieur" checked>
+                <div class="field"></div>
+                <span class="fs1 color-four">Monsieur</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="credit">Avez vous des crédits en cours ?</label>
+              <label class="custom-radio">
+                <input type="radio" name="credit" value="oui">
+                <div class="field"></div>
+                <span class="fs1 color-four">oui</span>
+              </label>
+
+              <label class="custom-radio"></label>
               <input type="radio" name="credit" value="non">
               <div class="field"></div>
               <span class="fs1 color-four">non</span>
-            </label>
+              </label>
+            </div>
+
+
+
+            <button type="button" data-previous>Previous</button>
+            <button type="submit">Submit</button>
           </div>
+        </form>
 
-
-
-          <button type="button" data-previous>Previous</button>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-
+      </div>
     </div>
+
+    <div></div>
+
   </div>
-
-  <div></div>
-
- </div>
-      <script src="app/js/script.js"></script>
-      
-
-
+  <script src="app/js/script.js"></script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
