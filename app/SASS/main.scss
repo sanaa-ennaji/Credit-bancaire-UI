@@ -1,4 +1,4 @@
-// Variables
+
 $card-background: white;
 $card-border-color: #333;
 $card-border-radius: 0.5rem;
@@ -102,9 +102,12 @@ $animation-timing: ease-in-out;
 }
 
 
-span{
+h2{
+  margin-top : 10rem; 
     font: bold;
     text-align: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     
 
 }
