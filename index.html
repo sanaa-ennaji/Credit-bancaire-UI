@@ -6,46 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="app/SASS/main.css">
-  <link rel="stylesheet" href="app/SASS/style.css">
+ 
 
 
 </head>
 
 <body>
-  <h1>Demander mon crédit en ligne</h1>
-  <div>
+  <h1 lclass="titre-center m-t-l">Demander mon crédit en ligne</h1>
+  <div class="main">
 
-    <div class="main">
-
-      <div class="cards">
-        <div class="card0"><span class"number">1</span>
-          <p>Simuler mon crédit</p>
-        </div>
-        <div class="card0"><span class"number">2</span>
-          <p>Mes coordonnées</p>
-        </div>
-        <div class="card0"><span class"number">3</span>
-          <p>Mes infos personnelles</p>
-        </div>
+    <div class="d-flex justify-b m-b-5 ">
+      <div class="w-30 flexe ">
+          <div class=" seconde w-100 titre-center color-four p-y-5 ">
+              <p class="number">1</p>
+              <p class="p-1">Simuler mon crédit</p>
+          </div>
+         
       </div>
 
-      <div classa="forms">
+      <div class="w-30 third titre-center p-y-5 white">
+          <p class="number">2</p>
+          <p class="p-1">Mes coordonnées</p>
+      </div>
+      <div class="w-30 third titre-center p-y-5 white">
+          <p class="number">3</p>
+          <p class="p-1">Mes infos personnelles</p>
+      </div>
+  </div>
+
+      <div class="forms">
         <form data-multi-step class="multi-step-form">
+
+ <!-- <h3 class="step-title">form 1</h3> -->
           <div class="card" data-step>
-            <h3 class="step-title">form 1</h3>
-            
-            <div class="form-group">
-              <label for="projet">Mon projet</label>
-              <select class="select-style"  name="projet" id="projet">
-                <option value="j'ai besoin d'argent">j'ai besoin d'argent</option>
-                <option value="">j'ai finance mon vihecule</option>
-                <option value="">j'ai besoin d'argent</option>
+            <div class="form-group margin-x-1" >
+              <p class="label">Mon projet</p>
+              <select class="minimal m-t-1">
+                  <option>J’ai besoin d’argent</option>
+                  <option>Je finance mon véhicule d’occasion</option>
+                  <option>Je Gère mes imprévus</option>
+                  <option>Je finance mon véhicule neuf</option>
+                  <option>J’équipe ma maison</option>
               </select>
-              <label for="job">Je suis</label>
-              <select class="select-style" name="job" id="job">
-                <option value="j'ai besoin d'argent">artisan</option>
-                <option value="j'ai finance mon vihecule">fonctionaire</option>
-                <option value="ma maison">artisan</option>
+              <p class="label m-t-5">Je suis</p>
+              <select class="minimal m-t-1">
+                  <option>Salarié du secteur privé</option>
+                  <option>Fonctionnaire</option>
+                  <option>Profession libérale</option>
+                  <option>Commerçant</option>
+                  <option>Artisan</option>
+                  <option>Retraité</option>
+                  <option>Autres professions</option>
               </select>
             </div>
 
@@ -53,7 +64,7 @@
               <p class="label m-t-5">Montant (en DH)</p>
               <input class="input1 w-8" type="number" id="sliderValue" step="1" value="5000">
               <input type="range" min="5000" max="600000" step="1000" value="5000" class="slider"
-                  id="mySlider">
+                  id="mySlider"> 
 
               <p class="label m-t-5">Durée (en mois)</p>
               <input class="input1 w-5" type="number" id="durationValue" step="1" value="12">
@@ -66,46 +77,66 @@
                   id="mensualiteSlider">
           </div>
      
-            <button type="button" data-next>Next</button>
+          <div class="flex-center">
+            <button class="button1 m-t-5" type="button" data-next>
+                <p class="p-10">Continuer</p>
+                <p class="p-2">Sans engagement</p>
+            </button>
+        </div>
+
+            <!-- <button type="button" data-next>Next</button> -->
           </div>
+
           <div class="card" data-step>
-            <h3 class="step-title">form 2</h3>
-            <div class="form-group">
-              <label for="email">Email*
-              </label>
-              <input type="email" name="email" id="email">
+            <!-- <h3 class="step-title">form 2</h3> -->
+            <div class="form-group m-t-5 input-container">
+              <input type="text" name="email" id="email" placeholder="" class="custom-input "
+              value="">
+          <label for="email" class="custom-label">Email*</label>
             </div>
-            <div class="form-group">
-              <label for="phone">Téléphone mobile*</label>
-              <input type="phone" name="phone" id="phone">
+            <div class="form-group m-t-9 input-container">
+              <input type="tel" name="phone" id="phone" placeholder=""
+              class="custom-input border-bottom" value="">
+          <label for="phone" id="phoneLabel" class="custom-label color">Téléphone mobile*</label>
             </div>
 
+
+            <div class="flex-center">
+              <button type="submit"  class="button1 m-t-5" data-next>
+                  <p class="p-10">Continuer</p>
+                  <p class="p-2">Sans engagement</p>
+              </button>
+          </div>
             <!-- <button type="button" data-previous>Previous</button> -->
-            <button type="button" data-next>Continuer <span>sans engagment</span></button>
+            <!-- <button >Continuer <span>sans engagment</span></button> -->
           </div>
+
+           <!-- <h3 class="step-title">form 3</h3> -->
           <div class="card" data-step>
-            <h3 class="step-title">form 3</h3>
+           
 
-            <div class="form-group">
-              <label for="civilite">Civilité</label>
-               <label class="custom-radio">
-                <input type="radio" name="option" value="monsieur" checked>
-                <div class="field"></div>
-                <span class="fs1 color-four">Monsieur</span>
-              </label>
+            <div class="radio-container">
+              <label for="civilite" class="radio-title">Civilité</label>
+              <div class="radio-group" id="civilite">
+                  <label class="custom-radio">
+                      <input type="radio" name="option" value="monsieur" checked>
+                      <div class="custom_field"></div>
+                      <span class="fs1 color-four">Monsieur</span>
+                  </label>
 
-              <label class="custom-radio">
-                <input type="radio" name="option" value="madame">
-                <div class="field"></div>
-                <span class="fs1 color-four">Madame</span>
-              </label>
+                  <label class="custom-radio">
+                      <input type="radio" name="option" value="madame">
+                      <div class="custom_field"></div>
+                      <span class="fs1 color-four">Madame</span>
+                  </label>
 
-              <label class="custom-radio">
-                <input type="radio" name="option" value="mademoiselle">
-                <div class="field"></div>
-                <span class="fs1 color-four">Mademoiselle</span>
-              </label>
-            </div>
+                  <label class="custom-radio">
+                      <input type="radio" name="option" value="mademoiselle">
+                      <div class="custom_field"></div>
+                      <span class="fs1 color-four">Mademoiselle</span>
+                  </label>
+              </div>
+          </div>
 
 
             <div class="form-group">
@@ -172,9 +203,6 @@
               <span class="fs1 color-four">non</span>
               </label>
             </div>
-
-
-
             <button type="button" data-previous>Previous</button>
             <button type="submit">Submit</button>
           </div>
