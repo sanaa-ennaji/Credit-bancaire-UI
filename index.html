@@ -14,6 +14,7 @@
 <body>
   <h1 lclass="titre-center m-t-l">Demander mon crédit en ligne</h1>
   <div class="main">
+    <!-- head -->
 
     <div class="d-flex justify-b m-b-5 ">
       <div class="w-30 flexe ">
@@ -33,11 +34,14 @@
         <p class="p-1">Mes infos personnelles</p>
       </div>
     </div>
+    <!-- head -->
 
     <div class="forms">
+      <!-- form -->
       <form data-multi-step class="multi-step-form">
 
-        <!-- <h3 class="step-title">form 1</h3> -->
+        <!-- <h3 class="step-title"> form 1</h3> -->
+
         <div class="card" data-step>
           <div class="form-group margin-x-1">
             <p class="label">Mon projet</p>
@@ -80,10 +84,11 @@
               <p class="p-2">Sans engagement</p>
             </button>
           </div>
-
           <!-- <button type="button" data-next>Next</button> -->
+          <!-- end form 1 -->
         </div>
 
+        <!--  form 2 -->
         <div class="card" data-step>
           <!-- <h3 class="step-title">form 2</h3> -->
           <div class="form-group m-t-5 input-container">
@@ -94,8 +99,6 @@
             <input type="tel" name="phone" id="phone" placeholder="" class="custom-input border-bottom" value="">
             <label for="phone" id="phoneLabel" class="custom-label color">Téléphone mobile*</label>
           </div>
-
-
           <div class="flex-center">
             <button type="submit" class="button1 m-t-5" data-next>
               <p class="p-10">Continuer</p>
@@ -103,14 +106,14 @@
             </button>
           </div>
           <!-- <button type="button" data-previous>Previous</button> -->
-          <!-- <button >Continuer <span>sans engagment</span></button> -->
         </div>
+        <!-- end form 2 -->
+
 
         <!-- <h3 class="step-title">form 3</h3> -->
         <div class="card" data-step>
 
-
-          <div class="radio-container">
+          <div class="form-group radio-container">
             <label for="civilite" class="radio-title">Civilité</label>
             <div class="radio-group" id="civilite">
               <label class="custom-radio">
@@ -118,13 +121,11 @@
                 <div class="custom_field"></div>
                 <span class="fs1 color-four">Monsieur</span>
               </label>
-
               <label class="custom-radio">
                 <input type="radio" name="option" value="madame">
                 <div class="custom_field"></div>
                 <span class="fs1 color-four">Madame</span>
               </label>
-
               <label class="custom-radio">
                 <input type="radio" name="option" value="mademoiselle">
                 <div class="custom_field"></div>
@@ -133,36 +134,34 @@
             </div>
           </div>
 
-
-
-          <div class="m-t-5 input-container">
+          <div class="form-group m-t-5 input-container">
             <input type="text" name="nom" id="nom" placeholder="" class="custom-input" value="">
             <label for="nom" class="custom-label">Nom*</label>
           </div>
-          <div class="m-t-9 input-container">
+          <div class="form-group m-t-9 input-container">
             <input type="text" name="prenom" id="prenom" placeholder="" class="custom-input" value="">
             <label for="prenom" class="custom-label">Prénom*</label>
           </div>
-          <div class="m-t-9 input-container">
+          <div class="form-group m-t-9 input-container">
             <input type="text" name="cin" id="cin" placeholder="" class="custom-input" value="">
             <label for="cin" class="custom-label">Numéro CIN / Carte de séjour*</label>
           </div>
-          <div class="m-t-9 input-container form-group">
+          <div class="form-group m-t-9 input-container form-group">
             <input type="text" name="date_naissance" id="date_naissance" placeholder="YYYY-MM-JJ" class="custom-input"
               value="">
             <label for="date_naissance" class="custom-label">Date de naissance*</label>
           </div>
-          <div class="m-t-9 input-container">
+          <div class="form-group m-t-9 input-container">
             <input type="text" name="date_embauche" id="date_embauche" placeholder="YYYY-MM-JJ" class="custom-input"
               value="">
             <label for="date_embauche" class="custom-label">Date d'embauche/début de
               l'activité*</label>
           </div>
-          <div class="m-t-9 input-container">
+          <div class="form-group m-t-9 input-container">
             <input type="text" name="revenus" id="revenus" placeholder="" class="custom-input" value="">
             <label for="revenus" class="custom-label">Total revenus mensuels (net en DH)*</label>
           </div>
-          <div class="radio-container m-t-4">
+          <div class="form-group radio-container m-t-4">
             <label for="credit" class="radio-title">Avez vous des crédits en cours ?</label>
             <div class="radio-group" id="credit">
               <label class="custom-radio">
@@ -177,22 +176,17 @@
               </label>
             </div>
           </div>
-     
-
           <div class="flex-center m-b-10">
             <button type="submit" class="button2 m-t-5">
               <p class="p-9">Demander ce crédit</p>
             </button>
 
-            <button class="button2 m-t-5">
+            <button class="button2 m-t-5" data-previous>
               <p class="p-9">Voir mon récapitulatif </p>
             </button>
           </div>
-          
-          <!-- <button type="button" data-previous>Previous</button>
-            <button type="submit">Submit</button> -->
         </div>
-
+     <!-- end form 3 -->
 
       </form>
 
