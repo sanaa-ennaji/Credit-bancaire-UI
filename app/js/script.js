@@ -12,10 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
     multiStepForm.addEventListener("click", e => {
       let incrementor;
       if (e.target.matches("[data-next]")) {
+        e.preventDefault();  
         incrementor = 1;
-      } else if (e.target.matches("[data-previous]")) {
+    } else if (e.target.matches("[data-previous]")) {
+        e.preventDefault(); 
         incrementor = -1;
-      }
+    }
+    
   
       if (incrementor == null) return;
   
